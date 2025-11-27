@@ -9,6 +9,11 @@ const Navbar = () => {
     const title = "SkillSphere";
     const navItems = ["Home", "Features",];
 
+   //todo: navigate to portfolio
+    const handleNavigate = () => {
+        window.open('https://portfolio-raushan-gold.vercel.app/', '_blank');
+    };
+
     return (
         <nav className="bg-[#0f172a] text-white w-full sticky top-0 z-50 shadow-md">
             {/* Desktop + Mobile container */}
@@ -33,7 +38,7 @@ const Navbar = () => {
                                 {item}
                             </li>
                         ))}
-                        <PortfolioBtn children='Visit Portfolio' />
+                        <PortfolioBtn children='Visit Portfolio' onClick={handleNavigate} />
                     </ul>
 
                 </div>
@@ -58,7 +63,7 @@ const Navbar = () => {
                             {item}
                         </li>
                     ))}
-                    <PortfolioBtn children='Visit My Portfolio' />
+                    <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} />
                 </ul>
             </div>
         </nav >
