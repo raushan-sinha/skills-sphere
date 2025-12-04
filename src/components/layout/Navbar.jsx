@@ -18,9 +18,9 @@ const Navbar = () => {
         <nav className="fixed top-4 w-[95%] left-1/2 -translate-x-1/2 bg-[#0f172a] text-white 
                 z-50 shadow-lg rounded-2xl backdrop-blur-xl border border-white/10">
             {/* Desktop + Mobile container */}
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
                 {/* Logo */}
-                <h1 className="text-base sm:text-2xl font-bold font-mono tracking-tight cursor-pointer">
+                <h1 className="text-xl sm:text-3xl font-bold font-mono tracking-tight cursor-pointer">
                     {title.split('').map((char, idx) => (
                         <span key={idx} className={`${idx > 4 ? 'text-cyan-600 ml-0.5' : ''}`}>
                             {char}
