@@ -20,7 +20,7 @@ const Navbar = () => {
             {/* Desktop + Mobile container */}
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
                 {/* Logo */}
-                <h1 className="text-xl sm:text-3xl font-bold font-mono tracking-tight cursor-pointer">
+                <h1 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight cursor-pointer">
                     {title.split('').map((char, idx) => (
                         <span key={idx} className={`${idx > 4 ? 'text-cyan-600 ml-0.5' : ''}`}>
                             {char}
