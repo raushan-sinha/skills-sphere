@@ -33,12 +33,10 @@ const Home = () => {
 
     return (
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 bg-linear-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white overflow-hidden">
-            {/* 3D Floating Cubes */}
             <div className="floating-cube cube-1"></div>
             <div className="floating-cube cube-2"></div>
             <div className="floating-cube cube-3"></div>
-
-            {/* Content */}
+            
             <div className='flex flex-col items-center justify-center'>
                 <h1 className="text-3xl whitespace-nowrap md:text-7xl font-bold leading-tight">
                     Level Up Your Tech with
