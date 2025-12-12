@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+/* Global 3D Floating Animations --- */
+.floating-cube {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    opacity: 0.3;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    animation: floatUpDown 6s ease-in-out infinite,
+        spin3D 10s linear infinite;
+}
+
+.cube-1 {
+    top: 10%;
+    left: 5%;
+}
+
+.cube-2 {
+    top: 60%;
+    right: 8%;
+    animation-delay: -2s;
+}
+
+.cube-3 {
+    bottom: 5%;
+    left: 40%;
+    animation-delay: -4s;
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35px);
+    }
+}
+
+@keyframes spin3D {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
