@@ -1,7 +1,5 @@
-import React from 'react'
-import HeroSection from './sections/HeroSection';
-import AboutSection from './sections/AboutSection';
-import ProjectSection from './sections/ProjectSection';
+import React from 'react';
+import { HeroSection, AboutSection, ProjectSection, BlogSection, SystemDesignSection, HelpDeskSection } from './sections';
 
 export default function Home() {
     return (
@@ -9,6 +7,9 @@ export default function Home() {
             <HeroSection />
             <AboutSection />
             <ProjectSection />
+            <BlogSection />
+            <SystemDesignSection />
+            <HelpDeskSection />
         </>
     );
 }
