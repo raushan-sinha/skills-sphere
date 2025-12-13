@@ -22,11 +22,11 @@ const featurePoints = [
 
 const AboutSection = () => {
     return (
-        <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 bg-linear-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white overflow-hidden">
+        <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 py-8 bg-linear-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white overflow-hidden">
 
             <div className="floating-cube cube-2"></div>
 
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
                 Hey, I’m Raushan —
                 <span className="text-cyan-400 font-mono"> Frontend Engineer & Technical Creator</span>
             </h2>
@@ -39,9 +39,9 @@ const AboutSection = () => {
                 <ul className="flex flex-col gap-4">
                     {featurePoints.map((item, idx) => (
                         <li key={idx}
-                            className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-gray-200 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 font-mono shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp" style={{ animationDelay: `${idx * 0.12}s` }}>
+                            className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp text-left font-mono">
                             <span className="font-medium tracking-wide">
-                                {item}
+                                •   {item}
                             </span>
                         </li>
                     ))}

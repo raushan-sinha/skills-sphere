@@ -16,7 +16,7 @@ const ProjectSection = () => {
             <div className="floating-cube cube-1"></div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Projects That Showcase My Engineering Craft
+                Projects That Showcase My <span className='text-cyan-400'>Engineering</span> Craft
             </h2>
 
             <p className="text-gray-300 max-w-2xl md:max-w-3xl text-base sm:text-lg mb-12 px-2">
@@ -25,18 +25,18 @@ const ProjectSection = () => {
                 real implementation notes.
             </p>
 
-            
-                <ul className="flex flex-col gap-4 text-gray-200">
-                    {projectHighlights.map((list, idx) => (
-                        <li
-                            key={idx}
-                            className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp text-left"
-                            style={{ animationDelay: `${idx * 0.12}s` }}
-                        >
-                            {list}
-                        </li>
-                    ))}
-                </ul>
+
+            <ul className="flex flex-col gap-4 text-gray-200">
+                {projectHighlights.map((list, idx) => (
+                    <li
+                        key={idx}
+                        className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp text-left font-mono"
+                        style={{ animationDelay: `${idx * 0.12}s` }}
+                    >
+                        {list}
+                    </li>
+                ))}
+            </ul>
 
             <button className="mt-14 px-8 py-3 bg-cyan-500 rounded-xl text-black font-semibold hover:scale-[1.05] active:scale-[0.98] transition-all duration-300 drop-shadow-[0_4px_20px_rgba(34,211,238,0.25)] cursor-pointer">
                 View All Projects
