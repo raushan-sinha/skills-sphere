@@ -13,6 +13,15 @@ const webInfoLinks = {
     links: ['About Us', 'Docs', 'Blog', 'Contact']
 };
 
+//todo: Social Media Links -
+const socialLinks = [
+    { icon: <GitHub /> },
+    { icon: <LinkedIn /> },
+    { icon: <Twitter /> },
+    { icon: <Mail /> },
+];
+
+
 const Footer = () => {
     return (
         <footer className="bg-[#0a0f1f] text-slate-300">
@@ -63,18 +72,11 @@ const Footer = () => {
                         </h3>
 
                         <div className="mt-4 flex items-center gap-4">
-                            <a className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                                <GitHub size={18} />
-                            </a>
-                            <a className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                                <LinkedIn size={18} />
-                            </a>
-                            <a className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                                <Twitter size={18} />
-                            </a>
-                            <a className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
-                                <Mail size={18} />
-                            </a>
+                            {socialLinks.map((link, idx) => (
+                                <a key={idx} className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
+                                    {link.icon}
+                                </a>
+                            ))}
                         </div>
 
                         <p className="mt-5 text-sm text-slate-400">
