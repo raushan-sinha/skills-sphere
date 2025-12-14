@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroSection, AboutSection, ProjectSection, BlogSection, SystemDesignSection, HelpDeskSection } from './sections';
+import { HeroSection, AboutSection, ProjectSection, BlogSection, SystemDesignSection, HelpDeskSection, CodingCollaborationSection } from './sections';
 
 export default function Home() {
     return (
@@ -9,6 +9,7 @@ export default function Home() {
             <ProjectSection />
             <BlogSection />
             <SystemDesignSection />
+            <CodingCollaborationSection />
             <HelpDeskSection />
         </>
     );
