@@ -73,7 +73,7 @@ const Footer = () => {
 
                         <div className="mt-4 flex items-center gap-4">
                             {socialLinks.map((link, idx) => (
-                                <a key={idx} className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition">
+                                <a key={idx} className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition cursor-pointer">
                                     {link.icon}
                                 </a>
                             ))}
