@@ -15,7 +15,7 @@ const BlogSection = () => {
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 py-8 bg-linear-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white overflow-hidden">
             <div className="floating-cube cube-3"></div>
 
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 <span className='text-cyan-400'>Engineering</span> Notes, <span className='text-cyan-400'>Technical</span> Write ups & <span className='text-cyan-400'>Idea</span> Dumps
             </h2>
 
