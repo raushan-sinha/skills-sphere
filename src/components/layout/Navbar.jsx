@@ -7,9 +7,9 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const title = "SkillSphere";
-    const navItems = ["Home", "Features",];
+    const navItems = ['Home', 'Features', 'Tech Blogs', 'Coding Gear', 'Tech News'];
 
-   //todo: navigate to portfolio
+    //todo: navigate to portfolio
     const handleNavigate = () => {
         window.open('https://portfolio-raushan-gold.vercel.app/', '_blank');
     };
