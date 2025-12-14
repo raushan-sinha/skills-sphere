@@ -2,11 +2,11 @@ import React from 'react'
 
 //todo: Project information -
 const projectHighlights = [
-    "⚛️ React + Next.js Apps",
-    "🎨 UI/UX Engineering Experiments",
-    "🚀 Performance-Optimized Frontend Builds",
-    "🧠 System Design for Frontend UI Systems",
-    "🛠️ Internal Tools & Dashboards",
+    "React + Next.js Apps",
+    "UI/UX Engineering Experiments",
+    "Performance-Optimized Frontend Builds",
+    "System Design for Frontend UI Systems",
+    "Internal Tools & Dashboards",
 ];
 
 const ProjectSection = () => {
@@ -30,10 +30,9 @@ const ProjectSection = () => {
                 {projectHighlights.map((list, idx) => (
                     <li
                         key={idx}
-                        className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp text-left font-mono"
-                        style={{ animationDelay: `${idx * 0.12}s` }}
+                        className="group p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-cyan-400/40 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_8px_20px_rgba(0,255,255,0.15)] animate-slideUp text-left font-mono cursor-pointer"
                     >
-                        {list}
+                        • {list}
                     </li>
                 ))}
             </ul>
