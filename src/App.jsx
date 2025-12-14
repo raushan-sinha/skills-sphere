@@ -1,3 +1,4 @@
+import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar"
 import Home from "./pages/Home/Home"
 
@@ -6,8 +7,12 @@ const App = () => {
         <>
             <Navbar />
 
-            {/* Main Page */}
-            <Home />
+            <div>
+                {/* Main Page */}
+                <Home />
+            </div>
+
+            <Footer />
         </>
     )
 }
