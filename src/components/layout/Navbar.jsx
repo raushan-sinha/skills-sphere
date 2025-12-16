@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PortfolioBtn from "../ui/Buttons/PortfolioBtn";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const title = "SkillSphere";
-    const navItems = ['Home', 'Features', 'Tech Blogs', 'Coding Gear', 'Tech News'];
+    const navItems = [
+        { link: '/', name: 'Home' },
+        { link: '/about', name: 'About' },
+        { link: '/techblog', name: 'Tech Blogs' },
+        { link: '/codinggear', name: 'Coding Gear' },
+        { link: '/technews', name: 'Tech News' },
+    ];
 
     //todo: navigate to portfolio
     const handleNavigate = () => {
@@ -32,11 +39,10 @@ const Navbar = () => {
                 <div className="flex flex-row gap-5 justify-center items-center">
                     <ul className="hidden md:flex flex-row items-center gap-8 text-lg">
                         {navItems.map((item, index) => (
-                            <li
-                                key={index}
-                                className="cursor-pointer hover:text-indigo-400 transition-all font-mono font-bolder hover:underline underline-offset-4"
-                            >
-                                {item}
+                            <li key={index}>
+                                <Link to={item.link} className="cursor-pointer hover:text-indigo-400 transition-all font-mono font-bold hover:underline underline-offset-4">
+                                    {item.name}
+                                </Link>
                             </li>
                         ))}
                         <PortfolioBtn children='Visit Portfolio' onClick={handleNavigate} />
@@ -57,11 +63,10 @@ const Navbar = () => {
             >
                 <ul className="flex flex-col gap-4 px-6 text-lg">
                     {navItems.map((item, index) => (
-                        <li
-                            key={index}
-                            className="cursor-pointer hover:text-indigo-400 transition-all"
-                        >
-                            {item}
+                        <li key={index}>
+                            <Link to={item.link} className="cursor-pointer hover:text-indigo-400 transition-all">
+                                {item.name}
+                            </Link>
                         </li>
                     ))}
                     <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} />
