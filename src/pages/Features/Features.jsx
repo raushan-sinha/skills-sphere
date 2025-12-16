@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Article, Newspaper, LaptopMac, Groups } from "@mui/icons-material";
+import { Helmet } from "react-helmet-async";
 
 /* Feature Data (scalable + reusable) */
 const features = [
@@ -36,13 +37,13 @@ const features = [
 const Features = () => {
     return (
         <>
-            <head>
+            <Helmet>
                 <title>Features | SkillSphere</title>
                 <meta
                     name="description"
                     content="Explore SkillSphere features including tech blogs, tech news, coding gear, and project collaboration for developers and startups."
                 />
-            </head>
+            </Helmet>
 
             <main className="w-full bg-gradient-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white">
                 {/* Hero Section */}
