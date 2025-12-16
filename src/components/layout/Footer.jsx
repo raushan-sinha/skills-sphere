@@ -65,7 +65,7 @@ const Footer = () => {
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm">
                             {webInfoLinks.links.map((link, idx) => (
-                                <li className="hover:text-white cursor-pointer">{link}</li>
+                                <li key={idx} className="hover:text-white cursor-pointer">{link}</li>
                             ))}
                         </ul>
                     </div>
