@@ -1,16 +1,10 @@
 import React from 'react';
-import { HeroSection, AboutSection, ProjectSection, BlogSection, SystemDesignSection, HelpDeskSection, CodingCollaborationSection } from './sections';
+import HeroSection from './sections/HeroSection';
 
 export default function Home() {
     return (
-        <>
+        <main>
             <HeroSection />
-            <AboutSection />
-            <ProjectSection />
-            <BlogSection />
-            <SystemDesignSection />
-            <CodingCollaborationSection />
-            <HelpDeskSection />
-        </>
+        </main>
     );
 }
