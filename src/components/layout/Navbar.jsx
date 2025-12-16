@@ -10,10 +10,7 @@ const Navbar = () => {
     const title = "SkillSphere";
     const navItems = [
         { link: '/', name: 'Home' },
-        { link: '/about', name: 'About' },
-        { link: '/techblog', name: 'Tech Blogs' },
-        { link: '/codinggear', name: 'Coding Gear' },
-        { link: '/technews', name: 'Tech News' },
+        { link: '/features', name: 'Features' },
     ];
 
     //todo: navigate to portfolio
