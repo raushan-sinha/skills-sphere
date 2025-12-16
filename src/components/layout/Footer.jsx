@@ -1,5 +1,6 @@
 import React from 'react'
 import { GitHub, LinkedIn, Mail, Twitter } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 //todo: Heading logic -
 const heading = 'SkillSphere';
@@ -7,13 +8,18 @@ const heading = 'SkillSphere';
 //todo: Quick links for Footer -
 const quickLinks = {
     heading: 'Quick Links',
-    links: ['Home', 'Features', 'Tech Blogs', 'Coding Gear', 'Tech News']
+    links: ['Home', 'Features',]
 };
 
 //todo: Website Information through links -
 const webInfoLinks = {
     heading: 'Information',
-    links: ['About Us', 'Docs', 'Blog', 'Contact']
+    links: [
+        { link: '/about', name: 'About' },
+        { link: '/docs', name: 'Docs' },
+        { link: '/blog', name: 'Blog' },
+        { link: '/help', name: 'Help' },
+    ]
 };
 
 //todo: Social Media Links -
@@ -64,8 +70,10 @@ const Footer = () => {
                             {webInfoLinks.heading.toUpperCase()}
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm">
-                            {webInfoLinks.links.map((link, idx) => (
-                                <li key={idx} className="hover:text-white cursor-pointer">{link}</li>
+                            {webInfoLinks.links.map((url, idx) => (
+                                <li key={idx}>
+                                    <Link to={url.link} className="hover:text-white cursor-pointer">{url.name}</Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
