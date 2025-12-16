@@ -1,6 +1,9 @@
 import React from 'react'
 import { GitHub, LinkedIn, Mail, Twitter } from '@mui/icons-material';
 
+//todo: Heading logic -
+const heading = 'SkillSphere';
+
 //todo: Quick links for Footer -
 const quickLinks = {
     heading: 'Quick Links',
@@ -32,8 +35,10 @@ const Footer = () => {
 
                     {/* Brand */}
                     <div>
-                        <h2 className="text-2xl font-bold text-white tracking-wide">
-                            SkillSphere
+                        <h2 className="text-2xl font-bold font-mono tracking-tight cursor-pointer">
+                            {heading.split('').map((char, idx) => (
+                                <span key={idx} className={`${idx > 4 ? 'text-cyan-600 ml-0.5' : ''}`}>{char}</span>
+                            ))}
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-400">
                             A next-gen learning platform focused on real-world skills, career
