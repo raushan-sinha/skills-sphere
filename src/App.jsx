@@ -4,13 +4,15 @@ import Navbar from "./components/layout/Navbar"
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Features from "./pages/Features/Features";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <Navbar />
-
+                <ScrollToTop />
+                
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
