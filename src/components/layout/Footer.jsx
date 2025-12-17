@@ -8,7 +8,10 @@ const heading = 'SkillSphere';
 //todo: Quick links for Footer -
 const quickLinks = {
     heading: 'Quick Links',
-    links: ['Home', 'Features',]
+    links: [
+        { link: '/', name: 'Home' },
+        { link: '/features', name: 'Features' },
+    ]
 };
 
 //todo: Website Information through links -
@@ -58,8 +61,10 @@ const Footer = () => {
                             {quickLinks.heading.toUpperCase()}
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm">
-                            {quickLinks.links.map((link, idx) => (
-                                <li key={idx} className="hover:text-white cursor-pointer">{link}</li>
+                            {quickLinks.links.map((url, idx) => (
+                                <li key={idx} className="hover:text-white cursor-pointer">
+                                    <Link to={url.link}>{url.name}</Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
