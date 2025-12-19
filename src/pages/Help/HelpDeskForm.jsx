@@ -4,7 +4,7 @@ const HelpDeskForm = () => {
     return (
         <>
             {/* Card */}
-            <div className="relative w-full max-w-md sm:max-w-lg backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-5 sm:p-8 animate-fadeIn mt-6">
+            <div className="relative w-full max-w-md sm:max-w-lg backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-5 sm:p-8 animate-fadeIn mt-10">
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8">
                     <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
