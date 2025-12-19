@@ -5,21 +5,24 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Features from "./pages/Features/Features";
 import ScrollToTop from "./components/common/ScrollToTop";
+import Help from "./pages/Help/Help";
 
 const App = () => {
     return (
         <>
-                <Navbar />
-                
-                <ScrollToTop />
-                
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/features" element={<Features />} />
-                </Routes>
+            <Navbar />
 
-                <Footer />
+            <ScrollToTop />
+
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/features" element={<Features />} />
+                {/* Footer Links */}
+                <Route path="/about" element={<About />} />
+                <Route path="/help" element={<Help />} />
+            </Routes>
+
+            <Footer />
         </>
     )
 }
