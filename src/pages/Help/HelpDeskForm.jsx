@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const HelpDeskForm = () => {
+    const inputRef = useRef(null);
+    useEffect(() => {
+        inputRef.current.focus();
+    });
+
     return (
         <>
             {/* Card */}
-            <div className="relative w-full max-w-md sm:max-w-lg backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-5 sm:p-8 animate-fadeIn mt-10">
+            <div className="relative w-full max-w-md sm:max-w-lg backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-5 sm:p-8 animate-fadeIn mt-4">
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8">
                     <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
@@ -17,7 +22,6 @@ const HelpDeskForm = () => {
 
                 {/* Form */}
                 <form className="space-y-4 sm:space-y-5">
-
                     {/* Full Name */}
                     <div>
                         <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">
@@ -27,9 +31,10 @@ const HelpDeskForm = () => {
                             type="text"
                             id='name'
                             name='name'
-                            autoComplete='off'
+                            autoComplete='on'
+                            ref={inputRef}
                             placeholder="Your full name"
-                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"/>
+                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition" />
                     </div>
 
                     {/* Email */}
@@ -41,9 +46,9 @@ const HelpDeskForm = () => {
                             type="email"
                             id='email'
                             name='email'
-                            autoComplete='off'
+                            autoComplete='on'
                             placeholder="you@example.com"
-                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"/>
+                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition" />
                     </div>
 
                     {/* Subject */}
@@ -57,7 +62,7 @@ const HelpDeskForm = () => {
                             name='subject'
                             autoComplete='off'
                             placeholder="Subject"
-                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"/>
+                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition" />
                     </div>
 
                     {/* Message */}
@@ -71,7 +76,7 @@ const HelpDeskForm = () => {
                             name='message'
                             autoComplete='off'
                             placeholder="Send Message...."
-                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none"/>
+                            className="w-full rounded-lg bg-white/20 border border-white/30 px-3 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none" />
                     </div>
 
                     {/* Buttons */}
