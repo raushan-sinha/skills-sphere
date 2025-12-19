@@ -83,13 +83,13 @@ const HelpDeskForm = () => {
                     <div className="flex flex-col sm:flex-row gap-3 pt-3">
                         <button
                             type="reset"
-                            className="w-full sm:w-1/2 rounded-lg border border-white/30 py-2.5 text-sm text-white font-medium hover:bg-white/10 transition">
+                            className="w-full sm:w-1/2 rounded-lg border border-white/30 py-2.5 text-sm text-white font-medium hover:bg-white/10 transition cursor-pointer">
                             Reset
                         </button>
 
                         <button
                             type="submit"
-                            className="w-full sm:w-1/2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 py-2.5 text-sm text-white font-semibold hover:opacity-90 transition">
+                            className="w-full sm:w-1/2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 py-2.5 text-sm text-white font-semibold hover:opacity-90 transition cursor-pointer">
                             Submit
                         </button>
                     </div>
