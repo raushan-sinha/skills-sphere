@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PortfolioBtn from "../ui/Buttons/PortfolioBtn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
 
+    //todo: Navbar Title
     const title = "SkillSphere";
+
+    //todo: Navbar Links for iterate each page
     const navItems = [
         { link: '/', name: 'Home' },
         { link: '/features', name: 'Features' },
@@ -19,14 +23,13 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-4 w-[95%] left-1/2 -translate-x-1/2 bg-[#0f172a] text-white 
-                z-50 shadow-lg rounded-2xl backdrop-blur-xl border border-white/10">
+        <nav className="fixed top-4 w-[95%] left-1/2 -translate-x-1/2 bg-[#0f172a] text-white z-50 shadow-lg rounded-2xl backdrop-blur-xl border border-white/10">
             {/* Desktop + Mobile container */}
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
                 {/* Logo */}
                 <h1 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight cursor-pointer">
                     {title.split('').map((char, idx) => (
-                        <span key={idx} className={`${idx > 4 ? 'text-cyan-600 ml-0.5' : ''}`}>
+                        <span key={idx} className={`${idx > 4 ? 'text-cyan-600 ml-0.5' : ''}`} onClick={() => navigate('/')}>
                             {char}
                         </span>
                     ))}
