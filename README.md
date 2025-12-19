@@ -45,19 +45,9 @@ In short, SkillSphere is your fast lane to consistent, structured, and future-fo
 - Tailwind CSS for high-speed styling
 - Clean folder structure for scalability
 - Reusable component architecture
-- Optimized bundle performance
 
-### ✔ **Codebase Architecture**
 
-src/
-├── assets/
-├── components/
-├── layouts/
-├── ui/Buttons
-├── pages/
-└── App.jsx
-└── index.css
-└── main.jsx
+---
 
 ## 🧩 Tech Stack
 
