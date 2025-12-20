@@ -1,10 +1,32 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { HELPVALIDATION } from '../../utils/helpValidation';
 
 const HelpDeskForm = () => {
     const inputRef = useRef(null);
     useEffect(() => {
         inputRef.current.focus();
-    });
+    }, []);
+
+    //todo: Create a logic for Form input validations after submitting -
+    const [error, setError] = useState({});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+        const validationErrors = HELPVALIDATION(data);
+        setError(validationErrors);
+
+        if (Object.keys(validationErrors) === 0) {
+            console.log('Form is valid', data);
+        }
+    };
+
+    const resetData = () => {
+        setError({});
+    }
+
 
     return (
         <>
@@ -21,10 +43,14 @@ const HelpDeskForm = () => {
                 </div>
 
                 {/* Form */}
-                <form className="space-y-4 sm:space-y-5">
+                <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
+                    {Object.values(error).map((msg, i) => (
+                        <p key={i} className='text-red-500 text-center font-bold'>{msg}</p>
+                    ))}
+
                     {/* Full Name */}
                     <div>
-                        <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">
+                        <label htmlFor="name" className="block text-base font-medium text-gray-300 mb-1">
                             Full Name
                         </label>
                         <input
@@ -39,7 +65,7 @@ const HelpDeskForm = () => {
 
                     {/* Email */}
                     <div>
-                        <label htmlFor="email" className="block text-xs font-medium text-gray-300 mb-1">
+                        <label htmlFor="email" className="block text-base font-medium text-gray-300 mb-1">
                             Email
                         </label>
                         <input
@@ -53,7 +79,7 @@ const HelpDeskForm = () => {
 
                     {/* Subject */}
                     <div>
-                        <label htmlFor="subject" className="block text-xs font-medium text-gray-300 mb-1">
+                        <label htmlFor="subject" className="block text-base font-medium text-gray-300 mb-1">
                             Subject
                         </label>
                         <input
@@ -67,7 +93,7 @@ const HelpDeskForm = () => {
 
                     {/* Message */}
                     <div>
-                        <label htmlFor="message" className="block text-xs font-medium text-gray-300 mb-1">
+                        <label htmlFor="message" className="block text-base font-medium text-gray-300 mb-1">
                             Message
                         </label>
                         <textarea
@@ -82,7 +108,8 @@ const HelpDeskForm = () => {
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-3">
                         <button
-                            type="reset"
+                            type='reset'
+                            onClick={resetData}
                             className="w-full sm:w-1/2 rounded-lg border border-white/30 py-2.5 text-sm text-white font-medium hover:bg-white/10 transition cursor-pointer">
                             Reset
                         </button>
