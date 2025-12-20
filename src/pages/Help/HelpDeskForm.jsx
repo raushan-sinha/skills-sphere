@@ -18,11 +18,12 @@ const HelpDeskForm = () => {
         const validationErrors = HELPVALIDATION(data);
         setError(validationErrors);
 
-        if (Object.keys(validationErrors) === 0) {
+        if (Object.keys(validationErrors).length === 0) {
             console.log('Form is valid', data);
         }
     };
 
+    //todo: Reset data -
     const resetData = () => {
         setError({});
     }
