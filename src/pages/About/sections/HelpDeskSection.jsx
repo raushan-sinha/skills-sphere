@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 //todo: Lists for Career Support Designed for Developers -
 const featureLists = [
@@ -28,9 +29,9 @@ const HelpDeskSection = () => {
                 ))}
             </ul>
 
-            <button className="mt-10 px-6 py-3 bg-cyan-500 rounded-xl text-black font-semibold hover:scale-105 transition cursor-pointer">
+            <Link className="mt-10 px-6 py-3 bg-cyan-500 rounded-xl text-black font-semibold hover:scale-105 transition cursor-pointer" to='/help'>
                 Visit Help Desk
-            </button>
+            </Link>
         </section>
     )
 }
