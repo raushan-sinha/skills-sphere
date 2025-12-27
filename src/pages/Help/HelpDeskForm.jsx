@@ -42,7 +42,7 @@ const HelpDeskForm = () => {
     //todo: Submit form by the key -
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
-            const form  = e.currentTarget.form;
+            const form = e.currentTarget.form;
             if (form) {
                 form.requestSubmit();
             }
@@ -75,6 +75,13 @@ const HelpDeskForm = () => {
                         We’re here to unblock you. Drop your issue and let’s sync.
                     </p>
                 </div>
+
+                <div className="flex justify-center items-center">
+                    <span className="text-cyan-600 font-bold text-xl">
+                        {successMsg}
+                    </span>
+                </div>
+                <br />
 
                 {/* Form */}
                 <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
@@ -149,12 +156,6 @@ const HelpDeskForm = () => {
                         </button>
                     </div>
                 </form>
-                <br />
-                <div className="flex justify-center items-center">
-                    <span className="text-cyan-600 font-bold text-xl">
-                        {successMsg}
-                    </span>
-                </div>
             </div>
         </>
     );
