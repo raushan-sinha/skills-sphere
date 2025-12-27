@@ -11,10 +11,6 @@ export default function About() {
                     name="description"
                     content="Learn about SkillSphere — a developer-focused platform built to empower modern engineers through practical learning, real-world projects, and community-driven growth."
                 />
-                <meta
-                    name="keywords"
-                    content="SkillSphere, about SkillSphere, developer platform, frontend learning, tech community, developer growth"
-                />
                 <meta name="author" content="SkillSphere" />
             </Helmet>
 
