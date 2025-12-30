@@ -6,6 +6,7 @@ import About from "./pages/About/About";
 import Features from "./pages/Features/Features";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Help from "./pages/Help/Help";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 {/* Footer Links */}
                 <Route path="/about" element={<About />} />
                 <Route path="/help" element={<Help />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
 
             <Footer />
