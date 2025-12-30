@@ -35,7 +35,7 @@ const socialLinks = [
 
 
 const Footer = () => {
-    
+
     //todo: Click on link to direct Home page render -
     const navigate = useNavigate();
     const handleNavigate = () => {
@@ -117,9 +117,9 @@ const Footer = () => {
                     </p>
 
                     <div className="flex gap-6 text-sm text-slate-400">
-                        <span className="hover:text-white cursor-pointer">
+                        <Link className="hover:text-white cursor-pointer" to='/privacy-policy'>
                             Privacy Policy
-                        </span>
+                        </Link>
                         <span className="hover:text-white cursor-pointer">
                             Terms of Service
                         </span>
