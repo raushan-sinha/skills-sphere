@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PortfolioBtn from "../ui/Buttons/PortfolioBtn";
 import { Link, useNavigate } from "react-router-dom";
+import { GitHub, LogoDev, Reddit } from "@mui/icons-material";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -17,10 +18,12 @@ const Navbar = () => {
         { link: '/features', name: 'Features' },
     ];
 
-    //todo: navigate to portfolio
-    const handleNavigate = () => {
-        window.open('https://portfolio-raushan-gold.vercel.app/', '_blank');
-    };
+    //todo: Social Icons links -
+    const socialLinks = [
+        { icon: <GitHub />, url: 'https://github.com/raushan-sinha' },
+        { icon: <Reddit />, url: 'https://www.reddit.com/u/raushan_sinha2004/s/Tf3CeNSC0k' },
+        { icon: <LogoDev />, url: 'https://dev.to/raushan_sinha_8efb05c7b1c' },
+    ];
 
     return (
         <nav className="fixed top-4 w-[95%] left-1/2 -translate-x-1/2 bg-[#0f172a] text-white z-50 shadow-lg rounded-2xl backdrop-blur-xl border border-gray/10">
@@ -45,7 +48,14 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
-                        <PortfolioBtn children='Visit Portfolio' onClick={handleNavigate} />
+
+                        {/* Social Connect icons */}
+                        <div className="border border-gray-400 rounded-xl px-4 py-2 flex items-center justify-center gap-6">
+                            {socialLinks.map((link, id) => (
+                                <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1">{link.icon}</a>
+                            ))}
+                        </div>
+                        {/* <PortfolioBtn children='Visit Portfolio' onClick={handleNavigate} /> */}
                     </ul>
 
                 </div>
@@ -69,7 +79,12 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
-                    <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} />
+                    <div className="border border-gray-400 rounded-xl px-6 py-3 flex items-center justify-start gap-6">
+                        <GitHub className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                        <Reddit className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                        <LogoDev className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                    </div>
+                    {/* <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} /> */}
                 </ul>
             </div>
         </nav >
