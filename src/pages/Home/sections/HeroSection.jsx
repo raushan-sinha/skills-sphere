@@ -36,7 +36,7 @@ const HeroSection = () => {
             <div className="floating-cube cube-1"></div>
             <div className="floating-cube cube-2"></div>
             <div className="floating-cube cube-3"></div>
-            
+
             <div className='flex flex-col items-center justify-center'>
                 <h1 className="text-3xl whitespace-nowrap md:text-7xl font-bold leading-tight">
                     Level Up Your Tech with
@@ -56,7 +56,7 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-10 flex gap-4 flex-wrap justify-center">
-                <a className="px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:scale-105 transition cursor-pointer">
+                <a className="px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:scale-105 transition cursor-pointer" href='https://portfolio-raushan-gold.vercel.app/' target='_blank' rel='noopener noreferrer'>
                     Explore My Portfolio
                 </a>
 
