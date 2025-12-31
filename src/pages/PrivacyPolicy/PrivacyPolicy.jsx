@@ -13,8 +13,8 @@ const PrivacyPolicy = () => {
 				/>
 			</Helmet>
 
-			<section className="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-200">
-				<div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
+			<section className="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-200 py-16 px-5 sm:px-10 lg:px-32">
+				<div className="max-w-5xl mx-auto mt-10">
 
 					{/* Header */}
 					<header className="mb-14 text-center">
