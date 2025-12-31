@@ -120,9 +120,9 @@ const Footer = () => {
                         <Link className="hover:text-white cursor-pointer" to='/privacy-policy'>
                             Privacy Policy
                         </Link>
-                        <span className="hover:text-white cursor-pointer">
+                        <Link className="hover:text-white cursor-pointer" to='/terms-service'>
                             Terms of Service
-                        </span>
+                        </Link>
                     </div>
                 </div>
             </div>
