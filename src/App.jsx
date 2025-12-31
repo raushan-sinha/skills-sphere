@@ -7,6 +7,7 @@ import Features from "./pages/Features/Features";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Help from "./pages/Help/Help";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsService from "./pages/TermsService/TermsService";
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/help" element={<Help />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-service" element={<TermsService />} />
             </Routes>
 
             <Footer />
