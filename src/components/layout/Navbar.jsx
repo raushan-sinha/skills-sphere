@@ -74,7 +74,7 @@ const Navbar = () => {
                 <ul className="flex flex-col gap-4 px-6 text-lg">
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <Link to={item.link} className="cursor-pointer hover:text-indigo-400 transition-all">
+                            <Link to={item.link} className="cursor-pointer hover:text-indigo-400 transition-all" onClick={() => setOpen(false)}>
                                 {item.name}
                             </Link>
                         </li>
