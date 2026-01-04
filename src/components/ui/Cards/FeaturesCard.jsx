@@ -15,7 +15,7 @@ const FeaturesCard = ({ icon, title, description }) => {
                 </h2>
 
                 {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                     {description}
                 </p>
 
