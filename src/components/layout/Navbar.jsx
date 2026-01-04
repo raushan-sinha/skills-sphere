@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PortfolioBtn from "../ui/Buttons/PortfolioBtn";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useMatch, useNavigate } from "react-router-dom";
 import { GitHub, LogoDev, Reddit } from "@mui/icons-material";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
+    // const { pathname } = useLocation();
+
+    //todo: Check which page is active -
+    // const isActive = (path) => pathname === path;
 
     //todo: Navbar Title
     const title = "SkillSphere";
@@ -43,7 +47,7 @@ const Navbar = () => {
                     <ul className="hidden md:flex flex-row items-center gap-8 text-lg">
                         {navItems.map((item, index) => (
                             <li key={index}>
-                                <Link to={item.link} className="cursor-pointer hover:text-indigo-400 transition-all font-mono font-bold hover:underline underline-offset-4">
+                                <Link to={item.link} className={useMatch(item.link) ? 'underline underline-offset-4 text-cyan-400 transition-all font-mono font-bold' : 'cursor-pointer font-mono font-bold'}>
                                     {item.name}
                                 </Link>
                             </li>
