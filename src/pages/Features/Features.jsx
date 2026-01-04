@@ -15,6 +15,10 @@ const Features = () => {
             </Helmet>
 
             <main className="w-full bg-gradient-to-br from-[#0a0f1f] via-[#0f172a] to-[#111827] text-white">
+                <div className="floating-cube cube-1"></div>
+                <div className="floating-cube cube-2"></div>
+                <div className="floating-cube cube-3"></div>
+                
                 {/* Hero Section */}
                 <section className="max-w-7xl mx-auto px-6 py-24 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 animate-fadeIn">
