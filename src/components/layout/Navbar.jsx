@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-4 w-[95%] left-1/2 -translate-x-1/2 bg-[#0f172a] text-white z-50 shadow-lg rounded-2xl backdrop-blur-xl border border-gray/10">
             {/* Desktop + Mobile container */}
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
                 <h1 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight cursor-pointer">
                     {title.split('').map((char, idx) => (
@@ -50,7 +50,7 @@ const Navbar = () => {
                         ))}
 
                         {/* Social Connect icons */}
-                        <div className="border border-gray-400 rounded-xl px-4 py-2 flex items-center justify-center gap-6">
+                        <div className="border border-red-400 rounded-xl px-4 py-1 flex items-center justify-center gap-6">
                             {socialLinks.map((link, id) => (
                                 <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1">{link.icon}</a>
                             ))}
@@ -79,10 +79,10 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
-                    <div className="border border-gray-400 rounded-xl px-6 py-3 flex items-center justify-start gap-6">
-                        <GitHub className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
-                        <Reddit className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
-                        <LogoDev className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                    <div className="border border-red-400 rounded-xl px-4 py-1 flex items-center justify-start gap-6 max-w-min">
+                        {socialLinks.map((link, id) => (
+                            <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1">{link.icon}</a>
+                        ))}
                     </div>
                     {/* <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} /> */}
                 </ul>
