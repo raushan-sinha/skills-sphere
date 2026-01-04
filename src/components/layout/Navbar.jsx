@@ -50,9 +50,9 @@ const Navbar = () => {
                         ))}
 
                         {/* Social Connect icons */}
-                        <div className="border border-red-400 rounded-xl px-4 py-1 flex items-center justify-center gap-6">
+                        <div className="bg-yellow-600 rounded-xl px-4 py-1 flex items-center justify-center gap-6">
                             {socialLinks.map((link, id) => (
-                                <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1">{link.icon}</a>
+                                <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1 text-black">{link.icon}</a>
                             ))}
                         </div>
                         {/* <PortfolioBtn children='Visit Portfolio' onClick={handleNavigate} /> */}
@@ -79,9 +79,9 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
-                    <div className="border border-red-400 rounded-xl px-4 py-1 flex items-center justify-start gap-6 max-w-min">
+                    <div className="bg-yellow-600 rounded-xl px-4 py-1 flex items-center justify-start gap-6 max-w-min">
                         {socialLinks.map((link, id) => (
-                            <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1">{link.icon}</a>
+                            <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1 text-black">{link.icon}</a>
                         ))}
                     </div>
                     {/* <PortfolioBtn children='Visit My Portfolio' onClick={handleNavigate} /> */}
