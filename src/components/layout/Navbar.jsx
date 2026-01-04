@@ -8,10 +8,6 @@ import { GitHub, LogoDev, Reddit } from "@mui/icons-material";
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
-    // const { pathname } = useLocation();
-
-    //todo: Check which page is active -
-    // const isActive = (path) => pathname === path;
 
     //todo: Navbar Title
     const title = "SkillSphere";
