@@ -41,7 +41,7 @@ const HeroSection = () => {
                 <h1 className="text-3xl whitespace-nowrap md:text-7xl font-bold leading-tight">
                     Level Up Your Tech with
                 </h1>
-                <span className="text-cyan-400 text-4xl md:text-7xl font-mono font-bold leading-tight"> {title}</span>
+                <span className="text-cyan-400 text-4xl md:text-7xl font-mono font-bold leading-tight">- {title} -</span>
             </div>
 
             <p className="mt-6 text-lg text-gray-300 max-w-3xl">
