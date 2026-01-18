@@ -50,7 +50,7 @@ const Navbar = () => {
                         ))}
 
                         {/* Social Connect icons */}
-                        <div className="bg-gradient-to-b from-[#f1eaff] to-[#ffeded] rounded-xl px-4 py-1 flex items-center justify-center gap-6">
+                        <div className="bg-linear-to-b from-[#f1eaff] to-[#ffeded] rounded-xl px-4 py-1 flex items-center justify-center gap-6">
                             {socialLinks.map((link, id) => (
                                 <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1 text-black">{link.icon}</a>
                             ))}
@@ -79,7 +79,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
-                    <div className="bg-gradient-to-b from-[#f1eaff] to-[#ffeded] rounded-xl px-4 py-1 flex items-center justify-start gap-6 max-w-min">
+                    <div className="bg-linear-to-b from-[#f1eaff] to-[#ffeded] rounded-xl px-4 py-1 flex items-center justify-start gap-6 max-w-min">
                         {socialLinks.map((link, id) => (
                             <a key={id} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform duration-200 mb-1 text-black">{link.icon}</a>
                         ))}
